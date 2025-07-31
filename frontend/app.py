@@ -90,7 +90,7 @@ if submit_button:
 
     # Send POST request to the prediction API
     try:
-        response = requests.post('http://localhost:8000/predict', json=data)
+        response = requests.post('https://customer-churn-deploy-phi3.onrender.com/predict', json=data)
         
         if response.status_code == 200:
             result = response.json()
